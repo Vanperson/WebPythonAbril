@@ -1,24 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width>, initial-scale=1.0">
     <title>Document</title>
-<style>
-    body{
-        display: flex;
-        background-color: azure;
-        justify-content: center;
-        align-items: center;
-        
-                
-    }
-</style>
-
 </head>
 <body>
-    <img src = "static/small.jpeg">
-    <a href="https://www.justwatch.com/br/serie/smallville">Entrar no link</a>
-    <h1> Olá Mundo </h1>
+    {% for i in post %}
+    <h1> {{i.titulo}} </h1>
+    <h2> {{i.texto}} </h2>
+    <h3> {{i.data_criacao}} </h3>
+    {% endfor %}
+
 </body>
 </html>
